@@ -1,8 +1,8 @@
 classes.py
 
-class House:
+class house:
 
-	def __init__(self, x, y, voltage, battery_no):
+	def __init__(self, x, y, voltage):
 		self.x = x
 		self.y = y
 		self.voltage = voltage
@@ -12,7 +12,7 @@ class House:
 		self.battery_no = battery_no		
 
 
-class Battery:
+class battery:
 
 	def __init__(self, x, y, min_x, max_x, voltage, d_voltage):	
 		x = self.x
