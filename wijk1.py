@@ -12,13 +12,18 @@ house = read_png('house.png')
 houseimg = OffsetImage(house, zoom=.1)
 
 # get the house coordinates
-xy=[]
+xy = []
+
+# get the house voltage output next to coordinates
+xyvolt= []
 
 with open('wijk1_huizen.csv', 'rb') as csvfile:
 	reader = csv.reader(csvfile, delimiter = ',')
 	for row in reader:
 		if row[0] != "x":
-			xy.append([int(row[0]), int(row[1])])
+			xy.append([int(row[0]), int(row[1]))
+			xyvolt.append([int(row[0]), int(row[1]), int(row[2]))
+		   
 
 # add the house image to the coordinates
 for row in xy:
